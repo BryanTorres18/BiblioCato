@@ -1,0 +1,48 @@
+.Header-Layout{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 20px;
+    font-size: 16px;
+}
+
+.Header-Layout img{
+    height: 120px;
+    width: 400px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+}
+
+.Header-Layout ul{
+    margin: 0 80px 20px 10px;
+}
+
+.Header-Layout nav{
+    list-style-type: none;
+    padding-right: 20px ;
+    margin-bottom: 10px;
+}
+
+.Header-Layout nav li{
+    display: inline;
+    margin: 0 10px;
+    padding: 0 10px 0 10px;
+}
+
+.Header-Layout nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.Header-Layout nav li h1{
+    display: inline;
+    margin: 0 10px;
+    padding: 0 5px 0 5px;
+}
+
+.select{
+    background-color: rgb(0, 166, 76);
+    padding: 10px 30px;
+    border-radius: 20px;
+}
