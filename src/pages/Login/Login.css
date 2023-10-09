@@ -1,53 +1,53 @@
-.Login-container{
+.Login-container {
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-.Login-container h1
-{
+.Login-container h1 {
     margin: 0 2px 0 5px;
     padding: 5px 80px 3px 0;
     color: white;
 }
-#h1-1{
+
+#h1-1 {
     font-family: 'Inter', sans-serif;
     font-weight: 1200;
     font-size: 85px;
     text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-#h1-2{
+#h1-2 {
     font-family: 'Inter', sans-serif;
     font-weight: 20;
     font-size: 50px;
     text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-#h1-3{
+#h1-3 {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     font-size: 51px;
     text-shadow: 3px 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.Login-container section{
+.Login-container section {
     padding: 50px 10px 0 20px;
 }
 
 .Login-container section form {
     display: flex;
     flex-direction: column;
-    width: 300px;
-    padding: 20px 40px 30px;
+    width: 400px;
+    padding: 20px 30px 30px;
     border-radius: 40px;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.5);
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
 
-.Login-container section form h1{
+.Login-container section form h1 {
     text-align: center;
     color: black;
     font-size: 30px;
@@ -55,14 +55,14 @@
     padding: 5px 0 30px 0;
 }
 
-.Login-container section form h2{
+.Login-container section form h2 {
     text-align: left;
     font-weight: 300;
     font-size: 18px;
     padding: 0 0 5px 5px;
 }
 
-.Login-container section form a{
+.Login-container section form a {
     text-align: center;
     font-weight: 300;
     font-size: 15px;
@@ -71,30 +71,28 @@
     color: black;
 }
 
-.Login-container section form input{
+.Login-container section form input {
     margin: 10px 10px 20px 0;
     backdrop-filter: blur(50px);
     border-radius: 10px;
     border: none;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 16px 40% 5px 20px;
+    padding: 16px 20px;
+    text-align: left; 
+    width: 95%; 
+    max-width: 100%;
+    font-family: 'Inter', sans-serif;
 }
 
-.Login-container section form input{
-    margin: 10px 10px 20px 0;
-    backdrop-filter: blur(50px);
-    border-radius: 10px;
-    border: none;
-    background-color: rgba(255, 255, 255, 0.5);
-    padding: 16px 40% 5px 20px;
-}
-
-.Login-container section form span{
+.Login-container section form span {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
+    margin-right: 200px;
+    margin-bottom: 10px;
 }
 
-.Login-container section form button{
+.Login-container section form button {
     font-family: 'Inter', sans-serif;
     font-weight: 600;
     border-radius: 18px;
@@ -107,4 +105,63 @@
     padding: 10px 10px 10px 10px;
     text-align: center;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-} 
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.checkbox-label input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    .Login-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    section h1 {
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    .Login-container section {
+        padding: 20px;
+    }
+
+    .Login-container section form {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box
+    }
+
+    .Login-container section form button {
+        margin: 10px auto;
+    }
+    #h1-1,
+    #h1-2,
+    #h1-3 {
+        font-size: 40px;
+        padding: 0 0 0 0;
+    }
+
+    .Login-container section form h2 {
+        font-size: 16px;
+
+    }
+
+    .Login-container section form a {
+        font-size: 14px;
+    }
+
+    .Login-container section form input {
+        width: 100%;
+        max-width: 100%;
+    }
+}

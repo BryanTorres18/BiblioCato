@@ -20,8 +20,8 @@ function Login() {
             <h2>Contraseña:</h2>
             <input type="password" name="password" />
           </label>
-          <label>
-            <input type="checkbox" id="recordarme"/>
+          <label className="checkbox-label">
+            <input type="checkbox"/>
             <span>Recuérdame</span>
           </label>
           <button type="submit">INGRESAR</button>
