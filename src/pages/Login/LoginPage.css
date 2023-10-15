@@ -1,0 +1,41 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Layout {
+    width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+    .Header-Layout {
+        grid-template-columns: 1fr;
+    }
+
+    .Header-Layout img {
+        max-width: 80%;
+    }
+
+    .Header-Layout ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Header-Layout li {
+        margin: 10px 0;
+    }
+
+    .Header-Layout nav li h1 {
+        margin: 0;
+        padding: 0;
+    }
+
+    .select {
+        padding: 10px;
+    }
+
+    .App {
+        padding: 20px;
+    }
+}

@@ -1,17 +1,19 @@
 import './App.css';
 import { Routes, Route } from "react-router-dom";
-import Layout from "./componentes/Layout";
-import Registro from "./pages/Registro/Registro";
-import Login from "./pages/Login/Login";
+import React from 'react';
+import RegistroPage from "./pages/Registro/RegistroPage";
+import LoginPage from "./pages/Login/LoginPage";
+import Inicio from "./pages/Inicio/Inicio";
 
 function App() {
+
   return (
     <div className='App'>
-      <Layout />
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="pages/Login/Login" element={<Login />} />
-        <Route path="pages/Registro/Registro" element={<Registro />} />
+        <Route path="/" element={<LoginPage />} />
+        <Route path="pages/Login/Login" element={<LoginPage />} />
+        <Route path="pages/Registro/Registro" element={<RegistroPage />} />
+        <Route path="pages/Inicio/Inicio" element={<Inicio />} />
       </Routes>
     </div>
   );

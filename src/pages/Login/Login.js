@@ -1,7 +1,9 @@
 import React from "react";
 import "./Login.css";
+import { useNavigate } from "react-router-dom";
 
 function Login() {
+  const navigate = useNavigate();
   return (
     <div className="Login-container">
       <section>
@@ -24,7 +26,9 @@ function Login() {
             <input type="checkbox"/>
             <span>Recuérdame</span>
           </label>
-          <button type="submit">INGRESAR</button>
+          <button button type="button" onClick={() => navigate("/pages/Inicio/Inicio")}>
+            INGRESAR
+          </button>
           <a href="">¿Olvidastes tu Contraseña?</a>
         </form>
       </section>

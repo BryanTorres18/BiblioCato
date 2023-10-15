@@ -4,9 +4,8 @@
   box-sizing: border-box;
 }
 
-html, body {
-  font-family: 'Inter', sans-serif;
-  font-weight: 600;
+
+body.image-background {
   background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.4)), url("./imagenes/fondo-universidad2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -16,44 +15,6 @@ html, body {
   margin: 0;
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.Layout {
-  width: 100%;
-}
-
-@media screen and (max-width: 768px) {
-  .Header-Layout {
-    grid-template-columns: 1fr;
-  }
-
-  .Header-Layout img {
-    max-width: 80%;
-  }
-
-  .Header-Layout ul {
-    flex-direction: column;
-    align-items: center; 
-  }
-
-  .Header-Layout li {
-    margin: 10px 0;
-  }
-
-  .Header-Layout nav li h1 {
-    margin: 0;
-    padding: 0;
-  }
-
-  .select {
-    padding: 10px;
-  }
-
-  .App {
-    padding: 20px;
-  }
+body.white-background {
+  background-color: white;
 }
