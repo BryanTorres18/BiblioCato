@@ -1,5 +1,6 @@
 const Informacion_Personal = () =>{
-    return <h1>Informacion Personal</h1>
+    return <div>Libros Prestados</div>
+    
 }
 
 export default Informacion_Personal;

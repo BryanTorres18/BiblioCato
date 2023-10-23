@@ -2,6 +2,9 @@ import '../../styles/Menu.css';
 import React, { useEffect } from 'react';
 import LayoutInicio from '../../componentes/LayoutInicio';
 import Footer from '../../componentes/Footer';
+import LibrosPrestados from '../../componentes/LibrosPrestados';
+import LibrosFavoritos from '../../componentes/LibrosFavoritos';
+
 
 function Inicio(){
   useEffect(() => {
@@ -15,6 +18,8 @@ function Inicio(){
       return (
         <div>
           <LayoutInicio />
+          <div><LibrosFavoritos /></div>
+          
           <Footer />
         </div>
       );
