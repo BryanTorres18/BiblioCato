@@ -3,7 +3,7 @@ import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
 import "../../styles/Menu.css";
 
-function Informacion_Personal() {
+function Novedades() {
   useEffect(() => {
     document.body.classList.add("white-background");
     document.body.classList.remove("image-background");
@@ -15,10 +15,10 @@ function Informacion_Personal() {
   return (
     <div>
       <LayoutInicio />
-      <h1>Informacion_Personal</h1>
+      <h1>Novedades</h1>
       <Footer />
     </div>
   );
 }
 
-export default Informacion_Personal;
+export default Novedades;
