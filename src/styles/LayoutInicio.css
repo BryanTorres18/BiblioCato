@@ -87,7 +87,7 @@ header{
     border-radius: 30px;
     display: flex;
     align-items: center;
-    margin-right: 20%;
+    margin-right: 8%;
     height:  45px;
     margin-left: 5%;
 }
@@ -118,6 +118,72 @@ header{
 
 .search-bar input:focus {
     outline: none;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.profile h2{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 100px;
+}
+
+#perfil{
+    border-top-left-radius: 70%;
+    border-top-right-radius: 70%;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+    width: 55px;
+    height: 55px;
+}
+
+.icon {
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.icon.active {
+    background-color: #f0f0f0;
+}
+
+.options {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    border: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    transform-origin: top;
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.options li {
+    padding: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    color: black;
+}
+
+.options li:hover {
+    background-color: #f0f0f0;
+}
+
+.options.show {
+    transform: scaleY(1);
+    display: block;
+    width: 150px;
+    margin-top: 150px;
+    margin-left: 100px;
 }
 
 

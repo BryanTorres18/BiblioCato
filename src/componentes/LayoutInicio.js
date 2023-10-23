@@ -1,10 +1,17 @@
 import "../styles/LayoutInicio.css";
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 function LayoutInicio() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <header>
       <section className="Header-LayoutInicio">
@@ -13,31 +20,73 @@ function LayoutInicio() {
         </div>
         <div className="search-bar">
           <section>
-          <FontAwesomeIcon icon={faMagnifyingGlass} beat style={{color: "#fcfcfc",}} />
+            <FontAwesomeIcon
+              icon={faMagnifyingGlass}
+              beat
+              style={{ color: "#fcfcfc" }}
+            />
           </section>
           <input
-            type="text" placeholder=" Busqueda por titulo, autor o contenido"
+            type="text"
+            placeholder=" Busqueda por titulo, autor o contenido"
           />
         </div>
+
         <div className="profile">
+          <img src={require("../imagenes/perfil_prueba1.jpg")} id="perfil" />
+          <h2>Pepito Ponze</h2>
+          <div onClick={toggleMenu} className={`icon ${isOpen ? 'active' : ''}`}>
+            <FontAwesomeIcon
+              icon={faBars}
+              size="xl"
+              style={{ color: "#000000" }}
+            />
+          </div>
+          {isOpen && (
+            <ul className={`options ${isOpen ? 'show' : ''}`}>
+              <Link to="../pages/Informacion_Personal/Informacion_personal">
+                <li>Ajustes</li>
+              </Link>
+              <Link to="../pages/Login/Login">
+                <li>Cerrar Sesion</li>
+              </Link>
+            </ul>
+          )}
         </div>
+
       </section>
       <nav className="menu">
         <ul>
           <li>
-            <Link to="https://www.ucsm.edu.pe">Home</Link>
+            <Link to="../pages/Inicio/Inicio">Base de Datos</Link>
           </li>
           <li>
             <h1>|</h1>
           </li>
           <li>
-            <Link to="../pages/Login/Login">Iniciar Sesión</Link>
+            <Link to="../pages/Recomendaciones/Recomendaciones">
+              Recomendaciones
+            </Link>
           </li>
           <li>
             <h1>|</h1>
           </li>
           <li>
-            <Link to="../pages/Registro/Registro">Registrarme</Link>
+            <Link to="../pages/Prestamos/Prestamos">Prestamos</Link>
+          </li>
+          <li>
+            <h1>|</h1>
+          </li>
+          <li>
+            <Link to="../pages/Novedades/Novedades">Novedades</Link>
+          </li>
+          <li>
+            <h1>|</h1>
+          </li>
+          <li>
+            <Link to="../pages/Informacion_Personal/Informacion_personal">
+              Usuario
+            </Link>
           </li>
         </ul>
       </nav>
