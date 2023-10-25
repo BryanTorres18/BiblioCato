@@ -2,8 +2,8 @@ import '../../styles/Menu.css';
 import React, { useEffect } from 'react';
 import LayoutInicio from '../../componentes/LayoutInicio';
 import Footer from '../../componentes/Footer';
-import LibrosPrestados from '../../componentes/LibrosPrestados';
-import LibrosFavoritos from '../../componentes/LibrosFavoritos';
+import Busqueda from '../../componentes/busquedaAvanzada';
+import Slider from '../../componentes/Slider';
 
 
 function Inicio(){
@@ -18,8 +18,14 @@ function Inicio(){
       return (
         <div>
           <LayoutInicio />
-          <div><LibrosFavoritos /></div>
-          
+          <div className='conteiner'>
+            <div className='conteiner_izq'>
+              <Slider/>
+            </div>
+            <div className='conteiner_der'>
+              <Busqueda />
+            </div>
+          </div>
           <Footer />
         </div>
       );

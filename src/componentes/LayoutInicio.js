@@ -80,14 +80,6 @@ function LayoutInicio() {
           <li>
             <Link to="../pages/Novedades/Novedades">Novedades</Link>
           </li>
-          <li>
-            <h1>|</h1>
-          </li>
-          <li>
-            <Link to="../pages/Informacion_Personal/Informacion_personal">
-              Usuario
-            </Link>
-          </li>
         </ul>
       </nav>
     </header>

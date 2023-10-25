@@ -1,0 +1,50 @@
+.busquedaTitle{
+    font-size: 30px;
+    font-family: 'Inter',sans-serif;
+    font-weight:600;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 20px;
+}
+.contenedorBusqueda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorMenuBusqueda{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 6px 6px  rgba(0,0,0,0.5);
+    width: max-content;
+}
+.divisorMenu{
+    margin: 8px;
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    align-items: center;
+
+}
+.label{
+    font-size: 18px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.inputBusqueda{
+    width: 288px;
+    height: 40px;
+    border-radius:20px;
+    border:1px;
+    border-color: #00a64c;
+    border-style: solid;
+    color: #00a64c;
+}
+.inputBusqueda input[type="select"]::-webkit-calendar-picker-indicator {
+    margin-right: 20px;
+}

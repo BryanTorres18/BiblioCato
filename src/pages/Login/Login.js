@@ -26,7 +26,7 @@ function Login() {
             <input type="checkbox"/>
             <span>Recuérdame</span>
           </label>
-          <button button type="button" onClick={() => navigate("/pages/Inicio/Inicio")}>
+          <button className="btm-inicio" button type="button" onClick={() => navigate("/pages/Inicio/Inicio")}>
             INGRESAR
           </button>
           <a href="">¿Olvidastes tu Contraseña?</a>

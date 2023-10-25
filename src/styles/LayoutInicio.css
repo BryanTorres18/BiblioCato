@@ -154,7 +154,7 @@ header{
 
 .options {
     display: none;
-    position: absolute;
+    position: fixed;
     background-color: #ffffff;
     border: none;
     list-style: none;

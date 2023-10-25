@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
 import '../../styles/Menu.css';
+import LibrosPrestados from "../../componentes/LibrosPrestados"; 
 
 function Prestamos() {
   useEffect(() => {
@@ -15,7 +16,7 @@ function Prestamos() {
   return (
     <div>
       <LayoutInicio />
-      <h1>Prestamos</h1>
+      <LibrosPrestados />
       <Footer />
     </div>
   );
