@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
+import MenuUsuario from "../../componentes/menuUsuario"
 import "../../styles/Menu.css";
 
 function Informacion_Personal() {
@@ -16,6 +17,7 @@ function Informacion_Personal() {
     <div>
       <LayoutInicio />
       <h1>Informacion_Personal</h1>
+      <MenuUsuario />
       <Footer />
     </div>
   )

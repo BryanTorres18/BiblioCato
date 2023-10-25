@@ -1,0 +1,26 @@
+.contenedorOpcionesMenuUsuario{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:space-around;
+    width: 366px;
+    height: 370px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+}
+
+.opcionesMenuUsuario{
+    width: 307px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #ffffff;
+    justify-content: center;
+    padding: 10px;
+    padding-left: 20px;
+}
+.textoOpciones{
+    font-family: 'Inter', sans-serif;
+    font-weight:600;
+    font-size: 18px;
+    
+}
