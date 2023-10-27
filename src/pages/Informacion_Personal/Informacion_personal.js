@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
 import MenuUsuario from "../../componentes/menuUsuario"
+import InformacionPersonal from "../../componentes/informacionPersonal";
 import "../../styles/Menu.css";
 
 function Informacion_Personal() {
@@ -21,7 +22,7 @@ function Informacion_Personal() {
               <MenuUsuario />
             </div>
             <div className='conteiner_der2'>
-              
+              <InformacionPersonal />
             </div>
           </div>
       <Footer />
