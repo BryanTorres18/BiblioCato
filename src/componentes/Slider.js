@@ -9,19 +9,19 @@ class Slider extends Component {
       slides: [
         {
           image: require("../imagenes/Slider/slider_1.jpg"),
-          text: "Texto de la imagen 1",
+          text: "Casa Santamariana rindio homenaje a la img. del Sr. de los Milagros",
         },
         {
           image: require("../imagenes/Slider/slider_2.jpg"),
-          text: "Texto de la imagen 2",
+          text: "UCSM presenta la reconstrucción del rostro de la Dama del Ampato en 3D",
         },
         {
           image: require("../imagenes/Slider/slider_3.jpg"),
-          text: "Texto de la imagen 3",
+          text: "La universidad de Oxfor distingue a la UCSM con su exclusivo sello de calidad 'Oxford Quality'",
         },
         {
           image: require("../imagenes/Slider/slider_4.jpg"),
-          text: "Texto de la imagen 4",
+          text: "UCSM realizó la presentacion del libro 'Las 13 constituciones del Perú en 200 años de vida republicana'",
         },
       ],
     };
