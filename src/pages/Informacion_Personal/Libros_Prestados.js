@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
+import MenuUsuario from "../../componentes/menuUsuario"
 import "../../styles/Menu.css";
-import Slider from "../../componentes/Slider";
+import LibrosPrestados from "../../componentes/LibrosPrestados";
 
-function Novedades() {
+function Libros_Prestados() {
   useEffect(() => {
     document.body.classList.add("white-background");
     document.body.classList.remove("image-background");
@@ -13,13 +14,21 @@ function Novedades() {
       document.body.classList.add("image-background");
     };
   }, []);
+  
   return (
     <div>
       <LayoutInicio />
-        <Slider/>
+      <div className='conteiner2'>
+            <div className='conteiner_izq2'>
+              <MenuUsuario />
+            </div>
+            <div className='conteiner_der2'>
+              <LibrosPrestados />
+            </div>
+          </div>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default Novedades;
+export default Libros_Prestados;

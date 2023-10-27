@@ -7,7 +7,10 @@ import Inicio from "./pages/Inicio/Inicio";
 import Recomendaciones from './pages/Recomendaciones/Recomendaciones';
 import Informacion_Personal from './pages/Informacion_Personal/Informacion_personal';
 import Novedades from './pages/Novedades/Novedades';
-import Prestamos from './pages/Prestamos/Prestamos';
+import Libros_Prestados from './pages/Informacion_Personal/Libros_Prestados';
+import Libros_Favoritos from './pages/Informacion_Personal/Libros_Favoritos';
+import Carnet_Biblioteca from './pages/Informacion_Personal/Carnet_Biblioteca';
+
 
 function App() {
 
@@ -19,9 +22,11 @@ function App() {
         <Route path="pages/Registro/Registro" element={<RegistroPage />} />
         <Route path="pages/Inicio/Inicio" element={<Inicio />} />
         <Route path="pages/Recomendaciones/Recomendaciones" element={<Recomendaciones />} />
-        <Route path="pages/Prestamos/Prestamos" element={<Prestamos/>} />
         <Route path="pages/Novedades/Novedades" element={<Novedades/>} />
         <Route path="pages/Informacion_Personal/Informacion_personal" element={<Informacion_Personal/>} />
+        <Route path="pages/Informacion_Personal/Libros_Prestados" element={<Libros_Prestados/>} />
+        <Route path="pages/Informacion_Personal/Libros_Favoritos" element={<Libros_Favoritos/>} />
+        <Route path="pages/Informacion_Personal/Carnet_Biblioteca" element={<Carnet_Biblioteca/>} />
       </Routes>
     </div>
   );

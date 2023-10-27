@@ -72,7 +72,7 @@ function LayoutInicio() {
             <h1>|</h1>
           </li>
           <li>
-            <Link to="../pages/Prestamos/Prestamos">Prestamos</Link>
+            <Link to="../pages/Informacion_Personal/Libros_Prestados">Prestamos</Link>
           </li>
           <li>
             <h1>|</h1>

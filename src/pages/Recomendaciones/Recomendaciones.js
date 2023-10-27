@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
 import '../../styles/Menu.css';
+import Slider from '../../componentes/Slider';
 
 function Recomendaciones() {
   useEffect(() => {
@@ -15,7 +16,7 @@ function Recomendaciones() {
   return (
     <div>
       <LayoutInicio />
-      <h1>Recomendaciones</h1>
+        <Slider/>
       <Footer />
     </div>
   );

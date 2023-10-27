@@ -33,3 +33,22 @@ div{
     margin-right: 20px;
     margin-top: 20px;
 }
+
+.conteiner2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.conteiner_izq2{
+    flex: 1;
+    padding-left: 100px;
+    margin-top: 20px;
+}
+
+.conteiner_der2{
+    flex: 2;
+    margin-right: 20px;
+    margin-top: 20px;
+}

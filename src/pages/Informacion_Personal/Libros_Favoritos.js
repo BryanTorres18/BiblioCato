@@ -1,10 +1,10 @@
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
-import '../../styles/Menu.css';
-import LibrosPrestados from "../../componentes/LibrosPrestados"; 
+import MenuUsuario from "../../componentes/menuUsuario"
+import "../../styles/Menu.css";
 
-function Prestamos() {
+function Libros_Favoritos() {
   useEffect(() => {
     document.body.classList.add("white-background");
     document.body.classList.remove("image-background");
@@ -13,13 +13,20 @@ function Prestamos() {
       document.body.classList.add("image-background");
     };
   }, []);
+  
   return (
     <div>
       <LayoutInicio />
-      <LibrosPrestados />
+      <div className='conteiner2'>
+            <div className='conteiner_izq2'>
+              <MenuUsuario />
+            </div>
+            <div className='conteiner_der2'>
+            </div>
+          </div>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default Prestamos;
+export default Libros_Favoritos;

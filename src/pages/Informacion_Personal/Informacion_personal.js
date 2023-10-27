@@ -16,8 +16,14 @@ function Informacion_Personal() {
   return (
     <div>
       <LayoutInicio />
-      <h1>Informacion_Personal</h1>
-      <MenuUsuario />
+      <div className='conteiner2'>
+            <div className='conteiner_izq2'>
+              <MenuUsuario />
+            </div>
+            <div className='conteiner_der2'>
+              
+            </div>
+          </div>
       <Footer />
     </div>
   )

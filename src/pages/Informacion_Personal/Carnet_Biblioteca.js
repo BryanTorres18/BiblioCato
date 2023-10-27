@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
+import MenuUsuario from "../../componentes/menuUsuario"
 import "../../styles/Menu.css";
-import Slider from "../../componentes/Slider";
+import Carnet from "../../componentes/Carnet";
 
-function Novedades() {
+function Carnet_Biblioteca() {
   useEffect(() => {
     document.body.classList.add("white-background");
     document.body.classList.remove("image-background");
@@ -16,10 +17,17 @@ function Novedades() {
   return (
     <div>
       <LayoutInicio />
-        <Slider/>
+      <div className='conteiner2'>
+            <div className='conteiner_izq2'>
+              <MenuUsuario />
+            </div>
+            <div className='conteiner_der2'>
+              <Carnet/>
+            </div>
+          </div>
       <Footer />
     </div>
-  );
+  )
 }
 
-export default Novedades;
+export default Carnet_Biblioteca;
