@@ -3,6 +3,8 @@ import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
 import MenuUsuario from "../../componentes/menuUsuario"
 import "../../styles/Menu.css";
+import LibrosFavoritos from "../../componentes/LibrosFavoritos";
+
 
 function Libros_Favoritos() {
   useEffect(() => {
@@ -22,6 +24,7 @@ function Libros_Favoritos() {
               <MenuUsuario />
             </div>
             <div className='conteiner_der2'>
+              <LibrosFavoritos />
             </div>
           </div>
       <Footer />

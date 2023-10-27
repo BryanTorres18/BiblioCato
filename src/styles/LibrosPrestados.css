@@ -1,5 +1,6 @@
 .contenedor {
-    width: 55%;
+    display: flex;
+    width: 80%;
     margin: 0 auto;
     box-shadow: 5px 5px 5px 5px #0000002e;
     padding: 40px;
@@ -8,7 +9,6 @@
     margin-bottom: 40px;
     border-radius: 10px;
     background-color: #fff;
-
 }
 
 .seccion {
@@ -17,7 +17,6 @@
 }
 
 .seccion-formulario {
-    
     margin-left: 10px;
 }
 
@@ -28,23 +27,17 @@
     font-weight: bold;
 }
 
-table {
+.tabla {
     width: 100%;
     border-collapse: collapse;
     border: 1px solid #ddd;
 }
 
-table tr {
-    border: 1px solid #ddd;
-    padding: 10px;
-
-}
-
-table td {
+.dato {
     padding: 10px;
 }
 
-table th {
+.tabla th {
     padding: 10px;
     background-color: #0000000c;
     color: #000000;
@@ -53,14 +46,12 @@ table th {
     text-align: left;
 }
 
-form {
+.formulario {
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-top: 20px;
     margin-bottom: 20px;
-
-
 }
 
 .icono-input {
@@ -70,7 +61,6 @@ form {
     font-family: 'Inter', sans-serif;
     font-size: 18px;
     color: #000000;
-
 }
 
 .icono-input-fecha {
@@ -97,7 +87,7 @@ form {
     margin-left: 20px;
     width: 20%;
     color: #000000;
-    
+
 }
 
 .letra-input-fecha {
@@ -127,7 +117,7 @@ form {
     color: #000000;
 }
 
-input[type="text"] {
+.input-text {
     width: 75%;
     padding: 5px;
     border-radius: 30px;
@@ -138,7 +128,7 @@ input[type="text"] {
     color: #000000;
 }
 
-input[type="date"] {
+.input-date {
     width: 40%;
     padding: 5px;
     border-radius: 8px;
@@ -149,7 +139,7 @@ input[type="date"] {
     color: #000000;
 }
 
-button {
+.enviar-button {
     padding: 10px;
     border-radius: 5px;
     border: none;
@@ -164,15 +154,14 @@ button {
     margin-left: 60%;
 }
 
-button:hover {
+.enviar-button:hover {
     background-color: #62d495;
 }
 
-button:active {
+.enviar-button:active {
     background-color: #5eff009d;
-
 }
 
-button:focus {
+.enviar-button:focus {
     outline: none;
 }

@@ -50,7 +50,7 @@ function LibrosPrestados() {
             <div className="contenedor-seccion">
                 <section className="seccion">
                     <br></br>
-                    <table>
+                    <table className="tabla">
                         <thead>
                             <tr>
                                 <th>Por devolver</th>
@@ -60,8 +60,8 @@ function LibrosPrestados() {
                         <tbody>
                             {datosPorDevolver.map((item) => (
                                 <tr key={item.id}>
-                                    <td>{item.nombreLibro}</td>
-                                    <td>{item.fechaLimite}</td>
+                                    <td className="dato">{item.nombreLibro}</td>
+                                    <td className="dato">{item.fechaLimite}</td>
                                 </tr>
                             ))}
                         </tbody>
@@ -69,8 +69,7 @@ function LibrosPrestados() {
                 </section>
                 <br></br>
                 <section className="seccion">
-
-                    <table>
+                    <table className="tabla">
                         <thead>
                             <tr>
                                 <th>Libros Devueltos</th>
@@ -80,14 +79,13 @@ function LibrosPrestados() {
                         <tbody>
                             {datosDevueltos.map((item) => (
                                 <tr key={item.id}>
-                                    <td>{item.nombreLibro}</td>
-                                    <td>{item.fechaEntrega}</td>
+                                    <td className="dato">{item.nombreLibro}</td>
+                                    <td className="dato">{item.fechaEntrega}</td>
                                 </tr>
                             ))}
                         </tbody>
                     </table>
                 </section>
-
                 <section className="seccion-formulario">
                     <br></br>
                     <h2>Reclamos</h2>
@@ -96,22 +94,41 @@ function LibrosPrestados() {
                         <div className="icono-input">
                             <FontAwesomeIcon icon={faBook} style={{ color: "black" }} />
                             <div className="letra-input">Libro</div>
-                            <input type="text" name="libro" value={datosReclamo.libro} onChange={manejarEntrada} />
+                            <input
+                                className="input-text"
+                                type="text"
+                                name="libro"
+                                value={datosReclamo.libro}
+                                onChange={manejarEntrada}
+                            />
                         </div>
                         <div className="icono-input">
                             <FontAwesomeIcon icon={faUserTie} style={{ color: "black" }} />
                             <div className="letra-input">Autor</div>
-                            <input type="text" name="autor" value={datosReclamo.autor} onChange={manejarEntrada} />
+                            <input
+                                className="input-text"
+                                type="text"
+                                name="autor"
+                                value={datosReclamo.autor}
+                                onChange={manejarEntrada}
+                            />
                         </div>
                         <div className="icono-input-fecha">
                             <FontAwesomeIcon icon={faCalendarDays} style={{ color: "black" }} />
                             <div className="letra-input-fecha">Fecha</div>
-                            <input type="date" name="fecha" value={datosReclamo.fecha} onChange={manejarEntrada} />
+                            <input
+                                className="input-date"
+                                type="date"
+                                name="fecha"
+                                value={datosReclamo.fecha}
+                                onChange={manejarEntrada}
+                            />
                         </div>
                         <div className="icono-input-reclamo">
                             <FontAwesomeIcon icon={faNoteSticky} style={{ color: "black" }} />
                             <div className="letra-input-reclamo">Reclamo</div>
-                            <textarea className="textarea-reclamo"
+                            <textarea
+                                className="textarea-reclamo"
                                 name="reclamo"
                                 value={datosReclamo.reclamo}
                                 onChange={manejarEntrada}
@@ -120,14 +137,13 @@ function LibrosPrestados() {
                                     overflow: "auto",
                                     width: "75%",
                                     minHeight: "65px",
-                                 }}
+                                }}
                             />
                         </div>
                         <br></br>
-                        <button type="button" onClick={handleSubmitReclamo}>
+                        <button className="enviar-button" type="button" onClick={handleSubmitReclamo}>
                             Enviar Reclamo
                         </button>
-
                     </form>
                 </section>
             </div>

@@ -1,0 +1,47 @@
+.contenedor-libros {
+    display: flex;
+    width: 80%;
+    margin: 0 auto;
+    box-shadow: 5px 5px 5px 5px #0000002e;
+    padding: 40px;
+    margin-right: 40px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.tabla-libros {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+.tabla-libros th {
+    padding: 10px;
+    background-color: #0000000c;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    text-align: left;
+}
+
+.nombre-libro {
+    padding: 10px;
+}
+
+.favorito-icon {
+    padding: 10px;
+    width: 50px;
+    text-align: center;
+}
+
+.descargar-icon {
+    width: 50px;
+    padding: 10px;
+    text-align: center;
+}
+
+.editorial {
+    padding: 10px;
+}
