@@ -1,0 +1,58 @@
+#perfilImg{
+    width: 200px;
+    height: 200px;
+    border-top-left-radius: 70%;
+    border-top-right-radius: 70%;
+    border-bottom-left-radius: 70%;
+    border-bottom-right-radius: 70%;
+}
+.infoCaratula{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.caratulaContenedorTitulos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.caratulaTitulos{
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+#caratulaTitulosNombre{
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+}
+#caratulaTitulosRol{
+    font-family: 'Inter', sans-serif;
+    font-weight:500;
+    font-size: 20px;
+}
+#contenedorInfoPersonal{
+    width: 630px;
+    height: 650px;
+    border-radius: 20px;
+}
+
+.infoPersonalBoldText{
+    font-family: 'Inter', sans-serif;
+    font-weight:600;
+    font-size: 18px;
+    padding: 8px;
+}
+.infoPersonalLightText{
+    font-family: 'Inter', sans-serif;
+    font-weight:300;
+    font-size: 18px;
+    padding: 8px;
+}
+.infoPersonal{
+    display: flex;
+    flex-direction: row;
+    padding-left: 15px;
+    padding-top: 50px;
+}
