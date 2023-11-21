@@ -50,6 +50,7 @@ app.post('/login', async (req, res) => {
         apellidoPat: user.apellidoPat,
         apellidoMat: user.apellidoMat,
         telefono: user.telefono,
+        carrera: user.carrera
       };      
       res.json({ success: true, message: 'Inicio de sesión exitoso', user: userInfo });
     } else {
