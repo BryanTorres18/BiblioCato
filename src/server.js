@@ -42,10 +42,16 @@ app.post('/login', async (req, res) => {
     const decryptedPassword = bytes.toString(CryptoJS.enc.Utf8);
     const isPasswordValid = decryptedPassword == user.contrasenia;
 
-    console.log(isPasswordValid);
-
     if (isPasswordValid) {
-      res.json({ success: true, message: 'Inicio de sesión exitoso' });
+      const userInfo = {
+        codUsuario: user.codUsuario,
+        correo: user.correo,  
+        nombres: user.nombres,
+        apellidoPat: user.apellidoPat,
+        apellidoMat: user.apellidoMat,
+        telefono: user.telefono,
+      };      
+      res.json({ success: true, message: 'Inicio de sesión exitoso', user: userInfo });
     } else {
       res.json({ success: false, message: 'Credenciales incorrectas' });
     }

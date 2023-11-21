@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Login.css";
-import { useNavigate } from "react-router-dom";
 import CryptoJS from "crypto-js";
+import { useNavigate } from "react-router-dom";
+
+
 
 function Login() {
   const navigate = useNavigate();
@@ -24,7 +26,6 @@ function Login() {
 
       const encryptedPassword = CryptoJS.AES.encrypt(formData.password, secretKey).toString();
 
-      // Send the plain text password, not the hashed one
       const dataToSend = { ...formData, password: encryptedPassword };
   
       const response = await fetch("http://localhost:3001/login", {
@@ -38,7 +39,7 @@ function Login() {
       const data = await response.json();
   
       if (data.success) {
-        console.log(data.message);
+        localStorage.setItem('userInfo', JSON.stringify(data.user));
         navigate("/pages/Inicio/Inicio");
       } else {
         console.log(data.message);

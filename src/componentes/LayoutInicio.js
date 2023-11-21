@@ -1,12 +1,26 @@
 import "../styles/LayoutInicio.css";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
-import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { faMagnifyingGlass, faBars } from "@fortawesome/free-solid-svg-icons";
+import { Link } from 'react-router-dom';
 
 function LayoutInicio() {
+  const [userInfo, setUserInfo] = useState({});
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const storedUserInfo = localStorage.getItem('userInfo');
+    try {
+      const parsedUserInfo = storedUserInfo ? JSON.parse(storedUserInfo) : {};
+      setUserInfo(parsedUserInfo);
+    } catch (error) {
+      console.error("Error al combinar la información del usuario:", error);
+    }
+  }, []); 
+
+  const userName = userInfo
+    ? `${userInfo.nombres || ''} ${userInfo.apellidoPat || ''} ${userInfo.apellidoMat || ''}`
+    : 'Nombre Predeterminado';
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -34,7 +48,7 @@ function LayoutInicio() {
 
         <div className="profile">
           <img src={require("../imagenes/perfil_prueba1.jpg")} id="perfil" />
-          <h2>Pepito Ponze</h2>
+          <h2>{userName}</h2>
           <div onClick={toggleMenu} className={`icon ${isOpen ? 'active' : ''}`}>
             <FontAwesomeIcon
               icon={faBars}
