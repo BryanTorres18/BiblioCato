@@ -1,9 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Login.css";
 import { useNavigate } from "react-router-dom";
+import CryptoJS from "crypto-js";
 
 function Login() {
   const navigate = useNavigate();
+  const [formData, setFormData] = useState({
+    Fcode: "",
+    password: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleLogin = async () => {
+    try {
+      const secretKey = 'PUCHICANAS';
+
+      const encryptedPassword = CryptoJS.AES.encrypt(formData.password, secretKey).toString();
+
+      // Send the plain text password, not the hashed one
+      const dataToSend = { ...formData, password: encryptedPassword };
+  
+      const response = await fetch("http://localhost:3001/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(dataToSend),
+      });
+  
+      const data = await response.json();
+  
+      if (data.success) {
+        console.log(data.message);
+        navigate("/pages/Inicio/Inicio");
+      } else {
+        console.log(data.message);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="Login-container">
       <section>
@@ -16,23 +60,37 @@ function Login() {
           <h1>Login</h1>
           <label>
             <h2>Código de alumno/docente:</h2>
-            <input type="text" name="Fcode" />
+            <input
+              type="text"
+              name="Fcode"
+              value={formData.Fcode}
+              onChange={handleChange}
+            />
           </label>
           <label>
             <h2>Contraseña:</h2>
-            <input type="password" name="password" />
+            <input
+              type="password"
+              name="password"
+              value={formData.password}
+              onChange={handleChange}
+            />
           </label>
           <label className="checkbox-label">
-            <input type="checkbox"/>
+            <input type="checkbox" />
             <span>Recuérdame</span>
           </label>
-          <button className="btm-inicio" button type="button" onClick={() => navigate("/pages/Inicio/Inicio")}>
+          <button
+            className="btm-inicio"
+            type="button"
+            onClick={handleLogin}
+          >
             INGRESAR
           </button>
-          <a href="">¿Olvidastes tu Contraseña?</a>
+          <a href="">¿Olvidaste tu Contraseña?</a>
         </form>
       </section>
-      </div>
+    </div>
   );
 }
 
