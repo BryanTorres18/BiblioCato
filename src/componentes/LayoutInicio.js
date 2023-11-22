@@ -18,7 +18,7 @@ function LayoutInicio() {
     }
   }, []); 
 
-  const userName = userInfo
+  const nombreCompleto = userInfo
     ? `${userInfo.nombres || ''} ${userInfo.apellidoPat || ''} ${userInfo.apellidoMat || ''}`
     : 'Nombre Predeterminado';
 
@@ -48,7 +48,7 @@ function LayoutInicio() {
 
         <div className="profile">
           <img src={require("../imagenes/perfil_prueba1.jpg")} id="perfil" />
-          <h2>{userName}</h2>
+          <h2>{nombreCompleto}</h2>
           <div onClick={toggleMenu} className={`icon ${isOpen ? 'active' : ''}`}>
             <FontAwesomeIcon
               icon={faBars}
