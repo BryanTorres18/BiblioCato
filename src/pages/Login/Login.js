@@ -5,7 +5,6 @@ import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 import 'sweetalert2/dist/sweetalert2.min.css';
 
-
 function Login() {
   const navigate = useNavigate();
   const [formData, setFormData] = useState({
