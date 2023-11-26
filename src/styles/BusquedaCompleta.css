@@ -1,0 +1,89 @@
+.busquedaTitle{
+    font-size: 25px;
+    font-family: 'Inter',sans-serif;
+    font-weight:600;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 5px;
+}
+.contenedorBusqueda{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedorMenuBusqueda{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 6px 6px  rgba(0,0,0,0.5);
+    width: max-content;
+}
+.divisorMenu{
+    margin: 8px;
+    display: flex;
+    flex-direction:column;
+    align-content: center;
+    align-items: flex-start;
+    padding-left: 10px;
+}
+.label{
+    font-size: 18px;
+    font-family: 'Inter',sans-serif;
+    font-weight: 400;
+    padding-bottom: 5px;
+}
+
+.inputBusqueda{
+    width: 288px;
+    height: 40px;
+    border-radius:20px;
+    border:2px;
+    border-color: #00a64c;
+    border-style: solid;
+    color: #00a64c;
+    text-align: left;
+}
+.inputBusqueda input[type="select"]::-webkit-calendar-picker-indicator {
+    margin-right: 20px;
+}
+
+.boton{
+    margin-top: 10px;
+    padding-left: 100px;
+}
+
+.button-37 {
+  background-color: #13aa52;
+  border: 1px solid #13aa52;
+  border-radius: 7px;
+  box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  outline: none;
+  outline: 0;
+  padding: 10px 25px;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 150ms, box-shadow 150ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-37:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .button-37 {
+    padding: 10px 30px;
+  }
+}

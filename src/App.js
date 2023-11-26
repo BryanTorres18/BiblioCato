@@ -10,6 +10,8 @@ import Novedades from './pages/Novedades/Novedades';
 import Libros_Prestados from './pages/Informacion_Personal/Libros_Prestados';
 import Libros_Favoritos from './pages/Informacion_Personal/Libros_Favoritos';
 import Carnet_Biblioteca from './pages/Informacion_Personal/Carnet_Biblioteca';
+import Busqueda from './pages/Busqueda_Completa/Busqueda';
+import DescripciónLibro from './pages/Descripcion_Libro/DescripcionLibro';
 
 
 function App() {
@@ -27,6 +29,8 @@ function App() {
         <Route path="pages/Informacion_Personal/Libros_Prestados" element={<Libros_Prestados/>} />
         <Route path="pages/Informacion_Personal/Libros_Favoritos" element={<Libros_Favoritos/>} />
         <Route path="pages/Informacion_Personal/Carnet_Biblioteca" element={<Carnet_Biblioteca/>} />
+        <Route path="pages/Busqueda_Completa/Busqueda" element={<Busqueda/>} />
+        <Route path="pages/Descripcion_Libro/DescripcionLibro" element={<DescripciónLibro/>} />
       </Routes>
     </div>
   );

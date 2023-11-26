@@ -72,14 +72,16 @@ function LayoutInicio() {
       <nav className="menu">
         <ul>
           <li>
-            <Link to="../pages/Inicio/Inicio">Base de Datos</Link>
+            <Link to="../pages/Inicio/Inicio">
+              Inicio
+            </Link>
           </li>
           <li>
             <h1>|</h1>
           </li>
           <li>
-            <Link to="../pages/Recomendaciones/Recomendaciones">
-              Recomendaciones
+            <Link to="../pages/Busqueda_Completa/Busqueda">
+              Busqueda
             </Link>
           </li>
           <li>
