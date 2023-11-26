@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import "./Login.css";
 import CryptoJS from "crypto-js";
 import { useNavigate } from "react-router-dom";
-
-
+import Swal from "sweetalert2";
+import 'sweetalert2/dist/sweetalert2.min.css';
 
 function Login() {
   const navigate = useNavigate();
@@ -42,12 +42,19 @@ function Login() {
         localStorage.setItem('userInfo', JSON.stringify(data.user));
         navigate("/pages/Inicio/Inicio");
       } else {
-        console.log(data.message);
+        usuarioIncorrecto(data.message);
       }
     } catch (error) {
       console.error(error);
     }
   };
+
+  const usuarioIncorrecto = (error) =>{
+    Swal.fire({
+      icon: 'error',
+      title: error,
+    })
+  }
 
   return (
     <div className="Login-container">
