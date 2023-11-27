@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import LayoutInicio from "../../componentes/LayoutInicio";
 import Footer from "../../componentes/Footer";
 import "../../styles/Menu.css";
+import Descripcion from "../../componentes/Descripcion";
 
 
 
@@ -19,6 +20,7 @@ function DescripciónLibro() {
     <div>
       <LayoutInicio />
         <div className='conteiner2'>
+          <Descripcion/>
         </div>
       <Footer />
     </div>

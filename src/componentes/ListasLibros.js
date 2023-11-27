@@ -1,5 +1,6 @@
 import '../styles/ListasLibros.css';
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 function ListasLibros() {
     const librosData = [
@@ -19,9 +20,9 @@ function ListasLibros() {
         <div className='contenedorLibros'>
             {librosData.map((libro, index) => (
                 <div key={index} className='libro'>
-                    <a href={''}>
-                        <h2>{libro.nombre}</h2>
-                    </a>
+                    <Link to='../pages/Descripcion_Libro/DescripcionLibro'>
+                    {libro.nombre}
+                    </Link>
                     <h3>Disponible: {libro.disponible}</h3>
                     <p>{libro.descripcion}</p>
                 </div>
